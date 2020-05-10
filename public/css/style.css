@@ -1,0 +1,216 @@
+body {
+    height: 100%;
+    width: 100%;
+}
+
+html {
+    min-height: 100% !important;
+    height: 100%
+}
+
+form.searchform {
+    width: 90%;
+    align-content: center;
+}
+
+button.accordion {
+    border-radius: 15px 15px 0px 0px;
+    border: #CCD0D4 1px solid;
+    background-color: white;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+button.accordion.active,
+button.accordion:hover {
+    background-color: #ddd;
+}
+
+button.accordion:after {
+    content: '\002B';
+    color: #4A95FF;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+button.accordion.active:after {
+    content: "\2212";
+}
+
+div.panel {
+    background-color: #FAFBFF;
+    max-height: 0;
+    width: 100%;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.accordion-card {
+    width: 100%;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.undercard {
+    padding: 18px;
+    border-radius: 0px 0px 15px 15px;
+}
+
+.card-span {
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #cedaf7;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.done-button {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: none;
+    border-color: grey;
+}
+
+.done-button i {
+    visibility: hidden;
+}
+
+.done-button:hover i {
+    visibility: visible;
+}
+
+
+.date-picker {
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+    background-color: #FFF;
+    margin: 30px auto;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+
+    cursor: pointer;
+    user-select: none;
+}
+
+.date-picker:hover {
+    background-color: #F3F3F3;
+}
+
+.date-picker .selected-date {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #313131;
+    font-size: 28px;
+}
+
+.date-picker .dates {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    background-color: #FFF;
+}
+
+.date-picker .dates.active {
+    display: block;
+    border-radius: 20px;
+}
+
+.date-picker .dates .month {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #EEE;
+}
+
+.date-picker .dates .month .arrows {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #313131;
+    font-size: 20px;
+}
+
+.date-picker .dates .month .arrows:hover {
+    background-color: #F3F3F3;
+}
+
+.date-picker .dates .month .arrows:active {
+    background-color: #00CA85;
+}
+
+.date-picker .dates .days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    height: 200px;
+}
+
+.weekgroup {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    height: 30px;
+}
+
+.weekname {
+    justify-content: center;
+    align-items: center;
+    color: #313131;
+    display: flex;
+    font-weight: bold;
+}
+
+.date-picker .dates .days .day {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #313131;
+}
+
+.date-picker .dates .days .day.selected {
+    background-color: #267FFF;
+    border-radius: 50%;
+    color: white;
+}
+
+.clear-btn {
+    width: 100%;
+    border: none;
+    padding: 6px;
+    border-radius: 0px 0px 15px 15px;
+}
+
+#app {
+    min-height: 100%;
+}
